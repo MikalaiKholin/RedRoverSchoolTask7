@@ -16,5 +16,9 @@ public class Main {
         Employee [] employeeArray = {mike, anotherMike, anna};
 
         System.out.println(Salary.getSum(employeeArray));
+
+        System.out.println("-----------------------------------------");
+
+        KataFighter.declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew");
     }
 }
