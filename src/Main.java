@@ -20,5 +20,11 @@ public class Main {
         System.out.println("-----------------------------------------");
 
         KataFighter.declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew");
+
+        System.out.println("-----------------------------------------");
+
+        System.out.println(KataFighter.declareWinnerMin(new Fighter("Lew", 10, 2),
+                        new Fighter("Harry", 5, 4),
+                        "Lew"));
     }
 }

@@ -1,12 +1,8 @@
 public class KataFighter {
     public static String declareWinner(Fighter fighter1, Fighter fighter2, String firstAttacker) {
-        Fighter firstFighter;
-        Fighter secondFighter;
-        if (fighter1.name.equals(firstAttacker)) {
-            firstFighter = fighter1;
-            secondFighter = fighter2;
-        }
-        else{
+        Fighter firstFighter = fighter1;
+        Fighter secondFighter = fighter2;
+        if (fighter2.name.equals(firstAttacker)) {
             firstFighter = fighter2;
             secondFighter = fighter1;
         }
@@ -27,6 +23,19 @@ public class KataFighter {
             }
             System.out.printf("%s attacks %s; %s now has %d health.%n",
                     secondFighter.name, firstFighter.name, firstFighter.name, firstFighter.health);
+        }
+    }
+
+    public static String declareWinnerMin(Fighter fighter1, Fighter fighter2, String firstAttacker){
+        Fighter firstFighter = fighter1;
+        Fighter secondFighter = fighter2;
+        if (fighter2.name.equals(firstAttacker)) {
+            firstFighter = fighter2;
+            secondFighter = fighter1;
+        }
+        while (true) {
+            if ((secondFighter.health -= firstFighter.damagePerAttack) <= 0) return firstFighter.name;
+            if ((firstFighter.health -= secondFighter.damagePerAttack) <= 0) return secondFighter.name;
         }
     }
 }
