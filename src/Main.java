@@ -12,5 +12,9 @@ public class Main {
 
         System.out.println(mike.isSameName(anotherMike));
         System.out.println(mike.isSameName(anna));
+
+        Employee [] employeeArray = {mike, anotherMike, anna};
+
+        System.out.println(Salary.getSum(employeeArray));
     }
 }
