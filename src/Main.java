@@ -5,5 +5,12 @@ public class Main {
 
         System.out.println(john.getName());
         System.out.println(jane.getName());
+
+        Employee mike = new Employee("Mike", 36, Gender.MALE, 67);
+        Employee anotherMike = new Employee("Mike", 46, Gender.MALE, 27);
+        Employee anna = new Employee("Anna", 28, Gender.FEMALE, 56);
+
+        System.out.println(mike.isSameName(anotherMike));
+        System.out.println(mike.isSameName(anna));
     }
 }
